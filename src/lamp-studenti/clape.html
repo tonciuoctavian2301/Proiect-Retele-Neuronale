@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clape - Magazinul de Muzică</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#" id="back-to-top" title="Mergi sus">↑</a>
+    
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">🎵 Magazinul de Muzică</a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="chitare.html">Chitare</a></li>
+                <li><a href="clape.html">Clape</a></li>
+                <li><a href="percutie.html">Percuție</a></li>
+                <li><a href="corzi.html">Corzi</a></li>
+                <li><a href="instrumente_de_suflat.html">Suflat</a></li>
+                <li><a href="cos.html">🛒 Coșul tău (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Clape și Piane Digitale 🎹</h1>
+            <p>De la piane de scenă la sintetizatoare, avem clapa potrivită pentru tine.</p>
+            
+            <div class="product-flex">
+                <div class="product-card">
+                    <img src="p125.jpg" alt="Pian Digital Yamaha P-125">
+                    <h3>Yamaha P-125</h3>
+                    <p>Pian digital popular cu 88 de clape grele, ideal pentru studiu.</p>
+                    <span class="price">3.200 RON</span>
+                    <button class="add-to-cart-btn" data-id="cl01" data-name="Yamaha P-125" data-price="3200" data-image="p125.jpg">
+                        Adaugă în coș
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="junods76.jpg" alt="Sintetizator Roland Juno-DS">
+                    <h3>Roland Juno-DS</h3>
+                    <p>Sintetizator de performanță cu mii de sunete și operare intuitivă.</p>
+                    <span class="price">3.800 RON</span>
+                    <button class="add-to-cart-btn" data-id="cl02" data-name="Roland Juno-DS" data-price="3800" data-image="junods76.jpg">
+                        Adaugă în coș
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="akai.jpg" alt="Claviatura MIDI Akai MPK Mini">
+                    <h3>Akai MPK Mini</h3>
+                    <p>Claviatură MIDI compactă, perfectă pentru producție muzicală.</p>
+                    <span class="price">450 RON</span>
+                    <button class="add-to-cart-btn" data-id="cl03" data-name="Akai MPK Mini" data-price="450" data-image="akai.jpg">
+                        Adaugă în coș
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+        <div class="container">
+            <h3>🎸 Oferta Lunii</h3>
+            <div class="product-card">
+                <img src="f310.jpg" alt="Chitara acustica Yamaha F310">
+                <h3>Yamaha F310</h3>
+                <p>O chitară acustică excelentă pentru începători, cu un ton cald.</p>
+                <span class="price">750 RON</span>
+                <button class="add-to-cart-btn" data-id="ch03-oferta" data-name="Yamaha F310 (Oferta)" data-price="750" data-image="f310.jpg">
+                    Adaugă în coș
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 Magazinul de Muzică. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

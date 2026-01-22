@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percuție - Magazinul de Muzică</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#" id="back-to-top" title="Mergi sus">↑</a>
+    
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">🎵 Magazinul de Muzică</a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="chitare.html">Chitare</a></li>
+                <li><a href="clape.html">Clape</a></li>
+                <li><a href="percutie.html">Percuție</a></li>
+                <li><a href="corzi.html">Corzi</a></li>
+                <li><a href="instrumente_de_suflat.html">Suflat</a></li>
+                <li><a href="cos.html">🛒 Coșul tău (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Percuție și Tobe 🥁</h1>
+            <p>Seturi de tobe acustice, electronice și diverse instrumente de percuție.</p>
+            
+            <div class="product-flex">
+                <div class="product-card">
+                    <img src="tama.jpg" alt="Tobe Acustice Tama Imperialstar">
+                    <h3>Tama Imperialstar</h3>
+                    <p>Set complet de tobe acustice, ideal pentru începători.</p>
+                    <span class="price">2.400 RON</span>
+                    <button class="add-to-cart-btn" data-id="pe01" data-name="Tama Imperialstar" data-price="2400" data-image="tama.jpg">
+                        Adaugă în coș
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="roland.jpg" alt="Tobe Electronice Roland TD-07DMK">
+                    <h3>Roland TD-07DMK</h3>
+                    <p>Set de tobe electronice V-Drums cu pad-uri mesh, excelent pentru apartament.</p>
+                    <span class="price">4.500 RON</span>
+                    <button class="add-to-cart-btn" data-id="pe02" data-name="Roland TD-07DMK" data-price="4500" data-image="roland.jpg">
+                        Adaugă în coș
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="meinl.jpg" alt="Cajon Meinl Headliner">
+                    <h3>Meinl Headliner Cajon</h3>
+                    <p>Cajon din lemn de mesteacăn, sunet de bas profund și snare puternic.</p>
+                    <span class="price">550 RON</span>
+                    <button class="add-to-cart-btn" data-id="pe03" data-name="Meinl Headliner Cajon" data-price="550" data-image="meinl.jpg">
+                        Adaugă în coș
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+        <div class="container">
+            <h3>🎸 Oferta Lunii</h3>
+            <div class="product-card">
+                <img src="f310.jpg" alt="Chitara acustica Yamaha F310">
+                <h3>Yamaha F310</h3>
+                <p>O chitară acustică excelentă pentru începători, cu un ton cald.</p>
+                <span class="price">750 RON</span>
+                <button class="add-to-cart-btn" data-id="ch03-oferta" data-name="Yamaha F310 (Oferta)" data-price="750" data-image="f310.jpg">
+                    Adaugă în coș
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 Magazinul de Muzică. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

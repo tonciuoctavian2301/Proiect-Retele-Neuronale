@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitare - Magazinul de Muzică</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#" id="back-to-top" title="Mergi sus">↑</a>
+    
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">🎵 Magazinul de Muzică</a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="chitare.html">Chitare</a></li>
+                <li><a href="clape.html">Clape</a></li>
+                <li><a href="percutie.html">Percuție</a></li>
+                <li><a href="corzi.html">Corzi</a></li>
+                <li><a href="instrumente_de_suflat.html">Suflat</a></li>
+                <li><a href="cos.html">🛒 Coșul tău (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Chitare Acustice și Electrice 🎸</h1>
+            <p>Descoperă selecția noastră de chitare, perfecte pentru începători și profesioniști.</p>
+            
+            <div class="product-flex">
+                <div class="product-card">
+                    <img src="stratocaster.jpg" alt="Chitara Fender Stratocaster">
+                    <h3>Fender Stratocaster</h3>
+                    <p>Un model electric iconic, cunoscut pentru versatilitatea sa.</p>
+                    <span class="price">4.500 RON</span>
+                    <button class="add-to-cart-btn" data-id="ch01" data-name="Fender Stratocaster" data-price="4500" data-image="stratocaster.jpg">
+                        Adaugă în coș
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="lespaul.jpg" alt="Chitara Gibson Les Paul">
+                    <h3>Gibson Les Paul</h3>
+                    <p>Sunet plin și puternic, ideal pentru rock și blues.</p>
+                    <span class="price">8.000 RON</span>
+                    <button class="add-to-cart-btn" data-id="ch02" data-name="Gibson Les Paul" data-price="8000" data-image="lespaul.jpg">
+                        Adaugă în coș
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="f310.jpg" alt="Chitara acustica Yamaha F310">
+                    <h3>Yamaha F310</h3>
+                    <p>O chitară acustică excelentă pentru începători, cu un ton cald.</p>
+                    <span class="price">750 RON</span>
+                    <button class="add-to-cart-btn" data-id="ch03" data-name="Yamaha F310" data-price="750" data-image="f310.jpg">
+                        Adaugă în coș
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+        <div class="container">
+            <h3>🎸 Oferta Lunii</h3>
+            <div class="product-card">
+                <img src="f310.jpg" alt="Chitara acustica Yamaha F310">
+                <h3>Yamaha F310</h3>
+                <p>O chitară acustică excelentă pentru începători, cu un ton cald.</p>
+                <span class="price">750 RON</span>
+                <button class="add-to-cart-btn" data-id="ch03-oferta" data-name="Yamaha F310 (Oferta)" data-price="750" data-image="images/f310.jpg">
+                    Adaugă în coș
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 Magazinul de Muzică. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

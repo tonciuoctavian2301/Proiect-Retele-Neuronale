@@ -1,0 +1,6 @@
+{
+    "model": "optimized_model.h5",
+    "test_accuracy": 1.0,
+    "test_f1_macro": 1.0,
+    "best_experiment": "Exp1_Baseline"
+}

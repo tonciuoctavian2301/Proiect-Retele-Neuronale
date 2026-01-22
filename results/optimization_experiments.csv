@@ -1,0 +1,5 @@
+Experiment,Accuracy,F1_Score,Filters,LR,Dropout
+Exp1_Baseline,1.0,1.0,32,0.001,0.5
+Exp2_HighLR,0.875,0.8545454545454545,32,0.01,0.5
+Exp3_BigBatch,0.875,0.8545454545454545,32,0.001,0.5
+Exp4_Optimized,0.9375,0.9307359307359306,64,0.0005,0.3

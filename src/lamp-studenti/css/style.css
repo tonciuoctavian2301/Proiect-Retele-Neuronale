@@ -1,0 +1,333 @@
+/* === CERINȚE PROIECT - TEMA ELEGANT DARK (v3) === */
+
+/* --- 1. Variabile Globale (Paletă Albastră) --- */
+:root {
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    
+    /* Paleta de culori închisă */
+    --color-bg-gradient: linear-gradient(170deg, #1a1a1a 0%, #000000 100%);
+    --color-card-bg: #222222;
+    --color-header-bg: #111111;
+    --color-footer-bg: #111111;
+    
+    /* NOU: Accent albastru electric */
+    --color-accent-gradient: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    --color-accent-text: #00c6ff; 
+    
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #cccccc;
+    
+    /* NOU: Umbră pentru efectul de "plutire" */
+    --shadow-premium: 0 10px 30px rgba(0,0,0,0.4);
+    
+    --border-radius: 8px;
+    font-size: 16px; 
+}
+
+/* --- 2. Structura de Bază cu CSS GRID --- */
+body {
+    font-family: var(--font-secondary);
+    font-weight: 300; /* NOU: Font mai subțire pentru textul de bază */
+    margin: 0;
+    background: var(--color-bg-gradient);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    
+    display: grid; /* Cerința PDF [cite: 7] */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    min-height: 100vh;
+}
+
+header { grid-area: header; }
+nav { grid-area: nav; }
+main { grid-area: main; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* --- 3. Stiluri Header, Nav, Footer --- */
+header {
+    background: var(--color-header-bg);
+    color: var(--color-text-primary);
+    padding: 1.25rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-family: var(--font-primary);
+}
+
+nav {
+    background: var(--color-header-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav li {
+    width: 100%;
+    text-align: center;
+}
+nav a {
+    display: block;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    padding: 0.75rem 0;
+    border-bottom: 2px solid transparent;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+nav a:hover {
+    opacity: 1;
+    background: var(--color-accent-gradient);
+}
+
+main {
+    padding: 2.5rem 0;
+}
+
+aside {
+    padding: 2.5rem 1rem;
+    background-color: var(--color-card-bg);
+    border-top: 1px solid #333;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-footer-bg);
+    color: var(--color-text-secondary);
+    margin-top: 2.5rem;
+}
+
+/* --- 4. Tipografie (cu accente noi) --- */
+h1, h2, h3 {
+    font-family: var(--font-primary);
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+    letter-spacing: 0.5px; /* NOU: Adaugă spațiu pentru un look "aerisit" */
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: none;
+}
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: var(--color-accent-gradient); /* STIL NOU: Gradient albastru */
+    border-radius: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--color-accent-gradient); /* STIL NOU: Gradient albastru */
+    border-radius: 2px;
+}
+h3 {
+    padding-bottom: 0;
+}
+h3::after {
+    display: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-premium); /* NOU: Efect de "plutire" */
+}
+.hero h1 {
+    font-size: 2.8rem;
+}
+.hero h1::after {
+    display: none;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+}
+
+/* --- 5. Carduri cu FLEXBOX (cu efect de "plutire") --- */
+.product-flex,
+.category-flex {
+    display: flex; /* Cerința PDF [cite: 12] */
+    flex-wrap: wrap; /* Cerința PDF [cite: 12] */
+    justify-content: center;
+    gap: 1.875rem;
+}
+
+.product-card,
+.category-card {
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-premium); /* NOU: Efect de "plutire" */
+    border: 1px solid transparent; /* Eliminăm bordura vizuală */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* NOU: Tranzitie shadow */
+    flex-basis: 300px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.product-card:hover,
+.category-card:hover {
+    transform: translateY(-5px) scale(1.02); /* NOU: Efect de hover mai complex */
+    box-shadow: 0 0 25px rgba(0, 198, 255, 0.2); /* NOU: Strălucire albastră la hover */
+}
+
+/* Cardul de PRODUS */
+.product-card {
+    padding: 1.25rem;
+}
+.product-card img {
+    max-width: 100%; /* Cerința PDF [cite: 26] */
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.25rem;
+}
+.product-card h3 {
+    font-size: 1.4rem;
+    color: var(--color-text-primary);
+}
+.product-card p {
+    flex-grow: 1;
+}
+.product-card .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-accent-text); /* STIL NOU: Albastru */
+    margin-top: 1rem;
+}
+
+/* Cardul de CATEGORIE */
+.category-card {
+    padding: 2rem 1.25rem;
+    justify-content: center;
+    min-height: 150px;
+    text-decoration: none;
+}
+.category-card h3 {
+    font-size: 1.6rem;
+    color: var(--color-text-primary);
+}
+.category-card p {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+}
+
+/* --- 6. Butonul "Mergi sus" (cu gradient) --- */
+#back-to-top {
+    display: block;
+    position: fixed; /* Cerința PDF [cite: 29] */
+    bottom: 20px; /* Cerința PDF [cite: 29] */
+    right: 20px; /* Cerința PDF [cite: 29] */
+    z-index: 100;
+    
+    background: var(--color-accent-gradient); /* STIL NOU: Gradient albastru */
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+#back-to-top:hover {
+    box-shadow: 0 0 20px var(--color-accent-text); /* NOU: Strălucire albastră */
+    transform: scale(1.1);
+}
+
+/* --- 7. DESIGN RESPONSIV (Media Query) --- */
+@media (min-width: 900px) { /* Cerința PDF [cite: 16] */
+    
+    body {
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main aside"
+            "footer footer";
+    }
+
+    nav {
+        background: var(--color-header-bg);
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav li {
+        width: auto;
+    }
+    nav a {
+        padding: 0.75rem 1.5rem;
+    }
+    nav a:hover {
+        background: transparent;
+        color: var(--color-accent-text);
+        border-bottom-color: var(--color-accent-text); /* NOU: Accent pe desktop */
+    }
+    
+    aside {
+        border-top: none;
+        border-left: 1px solid #333;
+    }
+
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; }
+    .hero { padding: 5rem 2.5rem; }
+    .hero h1 { font-size: 3.2rem; }
+}
