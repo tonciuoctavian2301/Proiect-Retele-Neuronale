@@ -4,14 +4,11 @@ import numpy as np
 import random
 
 # --- CONFIGURĂRI ---
-# Calea unde sunt folderele tale (asigură-te că numele sunt exacte!)
+
 RAW_DIR = "../data/raw"
 PROCESSED_DIR = "../data/processed"
-IMG_SIZE = 64  # Toate imaginile vor fi redimensionate la 64x64 pixeli
+IMG_SIZE = 64
 
-# Aici definim perechile de foldere și etichetele lor
-# 0 = Stare Normală (Sigur)
-# 1 = Stare de Oboseală (Alertă)
 
 # Configurare pentru OCHI
 FOLDERS_EYES = [

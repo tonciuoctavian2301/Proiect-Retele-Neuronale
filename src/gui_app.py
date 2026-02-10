@@ -6,11 +6,11 @@ import os
 import sys
 from tensorflow.keras.models import load_model
 
-# --- COD ACTUALIZAT PENTRU ETAPA 6 ---
+
 CURRENT_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(CURRENT_SCRIPT_DIR)
 
-# AICI E MODIFICAREA: Încărcăm modelul OPTIMIZAT pentru ochi
+
 MODEL_EYES_PATH = os.path.join(PROJECT_ROOT, "models", "optimized_model.h5")
 # Modelul pentru gură poate rămâne cel vechi dacă nu l-ai optimizat separat
 MODEL_MOUTH_PATH = os.path.join(PROJECT_ROOT, "models", "model_mouth.h5")
@@ -27,9 +27,9 @@ class DrowsinessApp:
         try:
             self.model_eyes = load_model(MODEL_EYES_PATH)
             self.model_mouth = load_model(MODEL_MOUTH_PATH)
-            print("✅ Modele încărcate! Gata de treabă.")
+            print(" Modele încărcate! Gata de treabă.")
         except Exception as e:
-            print(f"❌ EROARE: Nu găsesc modelele! {e}")
+            print(f" EROARE: Nu găsesc modelele! {e}")
             sys.exit()
 
         self.face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -43,7 +43,7 @@ class DrowsinessApp:
         self.score = 0
         self.IMG_SIZE = 64
 
-        # Setări sensibilitate (Nu le mai modifici manual)
+
         self.ALARM_TRIGGER = 30  # La cât scor sună alarma
         self.EYE_THRESHOLD = 0.5  # Punctul de trecere (Standard)
 
@@ -80,7 +80,7 @@ class DrowsinessApp:
         tk.Button(self.controls, text="RESET SCOR", font=("Arial", 10), bg="#ff6b6b", fg="white",
                   command=self.reset_score).pack(pady=10)
 
-        # --- REGLAJ UNIC (IMPORTANT) ---
+        
         tk.Label(self.controls, text="__________________________", bg="#222f3e", fg="gray").pack(pady=20)
         tk.Label(self.controls, text="Dacă scorul crește invers:", bg="#222f3e", fg="white").pack()
 
